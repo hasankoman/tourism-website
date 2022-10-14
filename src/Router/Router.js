@@ -7,7 +7,7 @@ import Technology from "../Components/Technology";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/tourism-website",
     element: <App />,
     children: [
       {

@@ -43,23 +43,28 @@ export default function Header({ width }) {
           <ul className="flex gap-x-8 lg:gap-x-16 h-full">
             <li
               className={`h-full border-b-[3px] transition-all  border-b-third hover:border-opacity-60 border-opacity-0  ${
-                activeBar === "/"
+                activeBar === "/tourism-website"
                   ? "border-opacity-100 hover:border-opacity-100"
                   : ""
               } `}
             >
-              <Link to={`/`} className="h-full w-full flex items-center">
+              <Link
+                to={`/tourism-website`}
+                className="h-full w-full flex items-center"
+              >
                 <span className="mr-3">00</span>
                 <span className="tracking-widest">HOME</span>
               </Link>
             </li>
             <li
               className={`h-full border-b-[3px] transition-all  border-b-third hover:border-opacity-60 border-opacity-0  ${
-                activeBar === "/destination" ? "border-opacity-100" : ""
+                activeBar === "/tourism-website/destination"
+                  ? "border-opacity-100"
+                  : ""
               } `}
             >
               <Link
-                to={`/destination`}
+                to={`destination`}
                 className="h-full w-full flex items-center"
               >
                 <span className="mr-3">01</span>
@@ -68,21 +73,25 @@ export default function Header({ width }) {
             </li>
             <li
               className={`h-full border-b-[3px] transition-all border-b-third hover:border-opacity-60 border-opacity-0  ${
-                activeBar === "/crew" ? "border-opacity-100" : ""
+                activeBar === "/tourism-website/crew"
+                  ? "border-opacity-100"
+                  : ""
               } `}
             >
-              <Link to={`/crew`} className="h-full w-full flex items-center">
+              <Link to={`crew`} className="h-full w-full flex items-center">
                 <span className="mr-3">02</span>
                 <span className="tracking-widest">CREW</span>
               </Link>
             </li>
             <li
               className={`h-full border-b-[3px] transition-all border-b-third hover:border-opacity-60 border-opacity-0  ${
-                activeBar === "/technology" ? "border-opacity-100" : ""
+                activeBar === "/tourism-website/technology"
+                  ? "border-opacity-100"
+                  : ""
               } `}
             >
               <Link
-                to={`/technology`}
+                to={`technology`}
                 className="h-full w-full flex items-center"
               >
                 <span className="mr-3">03</span>
@@ -110,13 +119,13 @@ export default function Header({ width }) {
         <ul className="absolute top-36 text-2xl pl-10 w-full flex flex-col gap-y-6">
           <li
             className={` border-r-4 transition-all duration-700 border-r-third hover:border-opacity-60 border-opacity-0 h-[36px] ${
-              activeBar === "/"
+              activeBar === "/tourism-website"
                 ? "border-opacity-100 hover:border-opacity-100"
                 : ""
             } `}
           >
             <Link
-              to={`/`}
+              to={`/tourism-website`}
               className="h-full w-full flex items-center leading-5"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -126,13 +135,13 @@ export default function Header({ width }) {
           </li>
           <li
             className={` border-r-4 transition-all duration-700 border-r-third hover:border-opacity-60 border-opacity-0 h-[36px] ${
-              activeBar === "/destination"
+              activeBar === "/tourism-website/destination"
                 ? "border-opacity-100 hover:border-opacity-100"
                 : ""
             } `}
           >
             <Link
-              to={`/destination`}
+              to={`destination`}
               className="h-full w-full flex items-center leading-5"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -142,13 +151,13 @@ export default function Header({ width }) {
           </li>
           <li
             className={` border-r-4 transition-all duration-700 border-r-third hover:border-opacity-60 border-opacity-0 h-[36px] ${
-              activeBar === "/crew"
+              activeBar === "/tourism-website/crew"
                 ? "border-opacity-100 hover:border-opacity-100"
                 : ""
             } `}
           >
             <Link
-              to={`/crew`}
+              to={`crew`}
               className="h-full w-full flex items-center leading-5"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -158,13 +167,13 @@ export default function Header({ width }) {
           </li>
           <li
             className={` border-r-4 transition-all duration-700 border-r-third hover:border-opacity-60 border-opacity-0 h-[36px] ${
-              activeBar === "/technology"
+              activeBar === "/tourism-website/technology"
                 ? "border-opacity-100 hover:border-opacity-100"
                 : ""
             } `}
           >
             <Link
-              to={`/technology`}
+              to={`technology`}
               className="h-full w-full flex items-center leading-5"
               onClick={() => setIsOpen(!isOpen)}
             >
