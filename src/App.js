@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import { useElementSize } from "use-element-size";
+import { useEffect, useState } from "react";
+import { useResizeDetector } from "react-resize-detector";
+import { Outlet } from "react-router-dom";
 
 function App() {
+  const { width, height, ref } = useResizeDetector();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main
+      className="text-white relative h-full overflow-x-hidden overflow-y-auto sm:overflow-hidden "
+      ref={ref}
+    >
+      <Header width={width} />
+      <Outlet />
+    </main>
   );
 }
 

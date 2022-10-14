@@ -1,13 +1,150 @@
+@tailwind base;
+@tailwind components;
+@layer components {
+  .page {
+    @apply w-11/12 sm:w-9/12 mx-auto flex items-center justify-center flex-col xl:flex-row xl:justify-between sm:mt-[136px] mt-[80px];
+  }
+  .active-destination {
+    @apply translate-x-full;
+  }
+  .active-destination-image {
+    @apply opacity-0 translate-y-full;
+  }
+}
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Gemunu Libre", sans-serif;
+  height: 100vh;
+  background-color: black;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+.blur-box {
+  background: rgba(255, 255, 255, 0.178);
+  backdrop-filter: blur(15.7742px);
+}
+.nav-bar {
+  width: var(--window-w);
+}
+#nav-icon1 {
+  width: 24px;
+  height: 21px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #d0d6f9;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.6s ease-in-out;
+  -moz-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#nav-icon1 span:nth-child(2) {
+  top: 6px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 12px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 6px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 6px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.page-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-page-bg {
+  background-image: url(https://images.wallpaperscraft.com/image/single/space_open_space_planets_135213_3840x2160.jpg);
+}
+.destination-page-bg {
+  background-image: url(https://images.wallpaperscraft.com/image/single/planet_flash_light_158179_3840x2160.jpg);
+}
+.opacity-animation {
+  animation-name: opacity;
+  animation-duration: 2s;
+  opacity: 1;
+}
+.opacity-animation-destination {
+  animation-name: opacity;
+  animation-duration: 2s;
+  opacity: 1;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity-destination {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
